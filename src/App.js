@@ -1,4 +1,5 @@
 import './App.css';
+import Navbar from './Components/Navbar';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
     </form>
 
 </nav>
+<Navbar/>
     </>
   );
 }
