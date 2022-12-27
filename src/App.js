@@ -6,6 +6,7 @@ function App() {
   return (
     <>
 <Navbar title="MwizarDon"/>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, ut.</p>
     </>
   );
 }
