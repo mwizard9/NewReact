@@ -2,8 +2,9 @@ import React, {useState} from 'react'
 
 export default function Form(props) {
     const handleUpClick = ()=>{
-        console.log("button was clicked")
-        setText("You have clicked on handleUpClick")
+        console.log("button was clicked" + text)
+        let newText = text.toUpperCase();
+        setText(newText)
     }
     const handleOnChange = (event)=>{
         console.log("On change")
