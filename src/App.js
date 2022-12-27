@@ -5,8 +5,7 @@ import Navbar from './Components/Navbar';
 function App() {
   return (
     <>
-<Navbar title="MwizarDon"/>
-<p>Lorem ipsum dolor sitonsectetur adipisicing elit. Iure, ut.</p>
+<Navbar title="MwizarDon" About="About Us"/>
     </>
   );
 }
