@@ -7,7 +7,9 @@ function App() {
   return (
     <>
 <Navbar title="MwizarDon" About="About Us" Home="Home"/>
-<Form/>
+<div className="container">
+<Form heading="Enter the text to Analyze"/>
+</div>
     </>
   );
 }
