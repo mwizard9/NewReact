@@ -11,13 +11,19 @@ export default function Form(props) {
        let newText = text.toLowerCase();
        setText(newText)
    }
+
+   const handleClClick = ()=>{
+    // console.log("button was clicked" + text)
+     let newText = '';
+     setText(newText)
+ }
     const handleOnChange = (event)=>{
        // console.log("On change")
         setText(event.target.value)
     }
     
 
-    const[text, setText] = useState('Enter text here');
+    const[text, setText] = useState('');
     
   return (
     <>
@@ -28,9 +34,11 @@ export default function Form(props) {
         </div>
         <buttom className="btn btn-primary mx-1" onClick={handleUpClick}>Convert to Uppercase</buttom>
         <buttom className="btn btn-primary mx-1" onClick={handleLwClick}>Convert to Lowercase</buttom>
+        <buttom className="btn btn-primary mx-1" onClick={handleClClick}>Clear</buttom>
+        
     </div>
     <div className="container my-3">
-      <h1>Your text summary</h1>
+      <h2>Your text summary</h2>
       <p>{text.split(" ").length} words, {text.length} characters</p>
       <p>{0.008* text.split(" ").length} minutes to read</p>
       <h2>preview</h2>
