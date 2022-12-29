@@ -5,17 +5,20 @@ export default function Form(props) {
        // console.log("button was clicked" + text)
         let newText = text.toUpperCase();
         setText(newText)
+        props.showAlert("Converted to Uppercase","success")
     }
     const handleLwClick = ()=>{
       // console.log("button was clicked" + text)
        let newText = text.toLowerCase();
        setText(newText)
+       props.showAlert("Converted to Lowerercase","success")
    }
 
    const handleClClick = ()=>{
     // console.log("button was clicked" + text)
      let newText = '';
      setText(newText)
+     props.showAlert("clear text","success")
  }
     const handleOnChange = (event)=>{
        // console.log("On change")
@@ -27,11 +30,13 @@ export default function Form(props) {
       text.select();
       text.setSelectionRange(0,9999);
       navigator.clipboard.writeText(text.value);
+      props.showAlert("Copy To Clipboard","success")
     }
 
     const handleExtraSpaces = ()=> {
       let newText = text.split(/[ ]+/);
       setText(newText.join(" "))
+      props.showAlert("Remove Extra Spaces","success")
       }
     
 
