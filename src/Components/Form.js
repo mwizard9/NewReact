@@ -29,7 +29,10 @@ export default function Form(props) {
       navigator.clipboard.writeText(text.value);
     }
 
-   
+    const handleExtraSpaces = ()=> {
+      let newText = text.split(/[ ]+/);
+      setText(newText.join(" "))
+      }
     
 
     const[text, setText] = useState('');
@@ -45,6 +48,7 @@ export default function Form(props) {
         <buttom className="btn btn-primary mx-1" onClick={handleLwClick}>Convert to Lowercase</buttom>
         <buttom className="btn btn-primary mx-1" onClick={handleClClick}>Clear</buttom>
         <buttom className="btn btn-primary mx-1" onClick={handleCopy}>Copy Text</buttom>
+        <buttom className="btn btn-primary mx-1" onClick={handleExtraSpaces}>Remove Extra Spaces</buttom>
         
     </div>
     <div className="container my-3">
