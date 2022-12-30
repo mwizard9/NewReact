@@ -3,7 +3,13 @@ import Navbar from './Components/Navbar';
 import Form from './Components/Form';
 import Alert from './Components/Alert';
 import { useState } from 'react';
-//import About from './Components/About';
+import About from './Components/About';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 
 function App() {
