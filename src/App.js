@@ -6,7 +6,7 @@ import { useState } from 'react';
 import About from './Components/About';
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
   Link
 } from "react-router-dom";
@@ -41,14 +41,21 @@ function App() {
     }
   }
   return (
-    <>
+<>
+<Router>
 <Navbar title="MwizarDon" About="About Us" Home="Home" mode={mode} toggleMode={toggleMode}/>
 <Alert alert={alert}/>
+
 <div className="container my-3">
-<Form heading="Enter the text to Analyze" showAlert={showAlert} mode={mode}/>
-{/* <About/> */}
+<Routes>
+  <Route path="/about" element={<About />}>
+  </Route>
+  <Route path="/" element={<Form heading="Enter text to analyze"  mode={mode} showAlert={showAlert} />}>
+  </Route>
+</Routes>
 </div>
-    </>
+</Router>
+</>
   );
 }
 
