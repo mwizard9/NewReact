@@ -49,11 +49,11 @@ export default function Form(props) {
         <div className="mb-3">
             <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor:props.mode==='dark'?'gray':'white',color:props.mode==='dark'?'white':'black'}} id="myBox" rows="8"></textarea>
         </div>
-        <buttom className="btn btn-primary mx-1" onClick={handleUpClick}>Convert to Uppercase</buttom>
-        <buttom className="btn btn-primary mx-1" onClick={handleLwClick}>Convert to Lowercase</buttom>
-        <buttom className="btn btn-primary mx-1" onClick={handleClClick}>Clear</buttom>
-        <buttom className="btn btn-primary mx-1" onClick={handleCopy}>Copy Text</buttom>
-        <buttom className="btn btn-primary mx-1" onClick={handleExtraSpaces}>Remove Extra Spaces</buttom>
+        <buttom className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Convert to Uppercase</buttom>
+        <buttom className="btn btn-primary mx-1 my-1" onClick={handleLwClick}>Convert to Lowercase</buttom>
+        <buttom className="btn btn-primary mx-1 my-1" onClick={handleClClick}>Clear</buttom>
+        <buttom className="btn btn-primary mx-1 my-1" onClick={handleCopy}>Copy Text</buttom>
+        <buttom className="btn btn-primary mx-1 my-1" onClick={handleExtraSpaces}>Remove Extra Spaces</buttom>
         
     </div>
     <div className="container my-3" style={{color:props.mode==='dark'?'white':'black'}}>
